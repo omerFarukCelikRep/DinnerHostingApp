@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using DinnerHostingApp.Application.Services.Authentication;
 using DinnerHostingApp.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
