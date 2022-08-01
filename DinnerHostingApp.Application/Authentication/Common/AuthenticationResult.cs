@@ -1,6 +1,6 @@
 using DinnerHostingApp.Domain.Entities;
 
-namespace DinnerHostingApp.Application.Services.Authentication;
+namespace DinnerHostingApp.Application.Authentication.Common;
 
 public record AuthenticationResult(
     User User,
