@@ -1,16 +1,13 @@
 using DinnerHostingApp.Application;
 using DinnerHostingApp.Infrastructure;
-using DinnerHostingApp.WebApi.Common.Errors;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
+using DinnerHostingApp.WebApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddApplication()
-                .AddInfrastructure(builder.Configuration);
-
-builder.Services.AddControllers();
-
-builder.Services.AddSingleton<ProblemDetailsFactory, DinnerHostingAppProblemDetailsFactory>();
+builder.Services
+            .AddPresentation()
+            .AddApplication()
+            .AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
