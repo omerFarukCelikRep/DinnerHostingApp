@@ -7,10 +7,12 @@ using DinnerHostingApp.Application.Authentication.Commands.Register;
 using DinnerHostingApp.Application.Authentication.Common;
 using DinnerHostingApp.Application.Authentication.Queries.Login;
 using MapsterMapper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DinnerHostingApp.WebApi.Controllers;
 
 [Route("auth")]
+[AllowAnonymous]
 public class AuthenticationController : ApiController
 {
     private readonly ISender _mediator;
