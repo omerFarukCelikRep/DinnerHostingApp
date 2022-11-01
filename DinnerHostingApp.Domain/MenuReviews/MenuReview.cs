@@ -1,12 +1,12 @@
 using DinnerHostingApp.Domain.Common.Models;
 using DinnerHostingApp.Domain.Common.ValueObjects;
-using DinnerHostingApp.Domain.Dinner.ValueObjects;
-using DinnerHostingApp.Domain.Guest.ValueObjects;
-using DinnerHostingApp.Domain.Host.ValueObjects;
-using DinnerHostingApp.Domain.Menu.ValueObjects;
-using DinnerHostingApp.Domain.MenuReview.ValueObjects;
+using DinnerHostingApp.Domain.Dinners.ValueObjects;
+using DinnerHostingApp.Domain.Guests.ValueObjects;
+using DinnerHostingApp.Domain.Hosts.ValueObjects;
+using DinnerHostingApp.Domain.Menus.ValueObjects;
+using DinnerHostingApp.Domain.MenuReviews.ValueObjects;
 
-namespace DinnerHostingApp.Domain.MenuReview;
+namespace DinnerHostingApp.Domain.MenuReviews;
 
 public sealed class MenuReview : AggregateRoot<MenuReviewId>
 {
