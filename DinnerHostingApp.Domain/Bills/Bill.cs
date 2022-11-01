@@ -1,18 +1,18 @@
-using DinnerHostingApp.Domain.Bill.ValueObjects;
+using DinnerHostingApp.Domain.Bills.ValueObjects;
 using DinnerHostingApp.Domain.Common.Models;
 using DinnerHostingApp.Domain.Common.ValueObjects;
-using DinnerHostingApp.Domain.Dinner.ValueObjects;
-using DinnerHostingApp.Domain.Guest.ValueObjects;
-using DinnerHostingApp.Domain.Host.ValueObjects;
+using DinnerHostingApp.Domain.Dinners.ValueObjects;
+using DinnerHostingApp.Domain.Guests.ValueObjects;
+using DinnerHostingApp.Domain.Hosts.ValueObjects;
 
-namespace DinnerHostingApp.Domain.Bill;
+namespace DinnerHostingApp.Domain.Bills;
 
 public sealed class Bill : AggregateRoot<BillId>
 {
     public Price Price { get; }
     public DateTime CreatedDateTime { get; }
     public DateTime UpdatedDateTime { get; }
-    
+
     public HostId HostId { get; }
     public DinnerId DinnerId { get; }
     public GuestId GuestId { get; }
