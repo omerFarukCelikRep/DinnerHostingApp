@@ -1,12 +1,12 @@
 using DinnerHostingApp.Domain.Common.Models;
 using DinnerHostingApp.Domain.Common.ValueObjects;
-using DinnerHostingApp.Domain.Dinner.ValueObjects;
-using DinnerHostingApp.Domain.Host.ValueObjects;
-using DinnerHostingApp.Domain.Menu.Entities;
-using DinnerHostingApp.Domain.Menu.ValueObjects;
-using DinnerHostingApp.Domain.MenuReview.ValueObjects;
+using DinnerHostingApp.Domain.Dinners.ValueObjects;
+using DinnerHostingApp.Domain.Hosts.ValueObjects;
+using DinnerHostingApp.Domain.Menus.Entities;
+using DinnerHostingApp.Domain.Menus.ValueObjects;
+using DinnerHostingApp.Domain.MenuReviews.ValueObjects;
 
-namespace DinnerHostingApp.Domain.Menu;
+namespace DinnerHostingApp.Domain.Menus;
 
 public sealed class Menu : AggregateRoot<MenuId>
 {
@@ -26,7 +26,12 @@ public sealed class Menu : AggregateRoot<MenuId>
     public IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.AsReadOnly();
     public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
 
-    private Menu(MenuId menuId, string name, string description, HostId hostId, DateTime createdDateTime, DateTime updatedDateTime) : base(menuId)
+    private Menu(MenuId menuId,
+                 string name,
+                 string description,
+                 HostId hostId,
+                 DateTime createdDateTime,
+                 DateTime updatedDateTime) : base(menuId)
     {
         Name = name;
         Description = description;
@@ -35,7 +40,9 @@ public sealed class Menu : AggregateRoot<MenuId>
         UpdatedDateTime = updatedDateTime;
     }
 
-    public static Menu Create(string name, string description, HostId hostId)
+    public static Menu Create(string name,
+                              string description,
+                              HostId hostId)
     {
         return new(MenuId.CreateUnique(), name, description, hostId, DateTime.UtcNow, DateTime.UtcNow);
     }
