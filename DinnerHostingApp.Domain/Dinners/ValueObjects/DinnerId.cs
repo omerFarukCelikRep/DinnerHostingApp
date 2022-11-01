@@ -1,6 +1,6 @@
 using DinnerHostingApp.Domain.Common.Models;
 
-namespace DinnerHostingApp.Domain.Dinner.ValueObjects;
+namespace DinnerHostingApp.Domain.Dinners.ValueObjects;
 
 public sealed class DinnerId : ValueObject
 {
@@ -18,5 +18,5 @@ public sealed class DinnerId : ValueObject
     public override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;
-    }    
+    }
 }
