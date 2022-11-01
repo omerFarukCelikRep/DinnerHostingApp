@@ -1,6 +1,6 @@
 using DinnerHostingApp.Domain.Common.Models;
 
-namespace DinnerHostingApp.Domain.Bill.ValueObjects;
+namespace DinnerHostingApp.Domain.Bills.ValueObjects;
 
 public sealed class BillId : ValueObject
 {
