@@ -1,7 +1,7 @@
 using DinnerHostingApp.Domain.Common.Models;
-using DinnerHostingApp.Domain.Menu.ValueObjects;
+using DinnerHostingApp.Domain.Menus.ValueObjects;
 
-namespace DinnerHostingApp.Domain.Menu.Entities;
+namespace DinnerHostingApp.Domain.Menus.Entities;
 
 public sealed class MenuSection : Entity<MenuSectionId>
 {
