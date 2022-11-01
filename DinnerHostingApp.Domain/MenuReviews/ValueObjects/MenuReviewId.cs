@@ -1,6 +1,6 @@
 using DinnerHostingApp.Domain.Common.Models;
 
-namespace DinnerHostingApp.Domain.MenuReview.ValueObjects;
+namespace DinnerHostingApp.Domain.MenuReviews.ValueObjects;
 
 public sealed class MenuReviewId : ValueObject
 {
