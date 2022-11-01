@@ -1,6 +1,6 @@
 using DinnerHostingApp.Domain.Common.Models;
 
-namespace DinnerHostingApp.Domain.Host.ValueObjects;
+namespace DinnerHostingApp.Domain.Hosts.ValueObjects;
 
 public sealed class HostId : ValueObject
 {
