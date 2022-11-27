@@ -10,6 +10,11 @@ public sealed class HostId : ValueObject
         Value = value;
     }
 
+    public static HostId Create(string value)
+    {
+        return new(Guid.Parse(value));
+    }
+
     public static HostId CreateUnique()
     {
         return new(Guid.NewGuid());
