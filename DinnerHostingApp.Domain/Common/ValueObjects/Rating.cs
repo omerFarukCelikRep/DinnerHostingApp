@@ -4,13 +4,13 @@ namespace DinnerHostingApp.Domain.Common.ValueObjects;
 
 public sealed class Rating : ValueObject
 {
-    public double Value { get; }
-    private Rating(double value)
+    public float Value { get; }
+    private Rating(float value)
     {
         Value = value;
     }
 
-    public static Rating CreateRating(double rating = 0)
+    public static Rating CreateRating(float rating = 0)
     {
         return new(rating);
     }
